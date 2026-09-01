@@ -5,20 +5,20 @@ cask "codex-tally" do
   url "https://github.com/findwangdi/CodexTally/releases/download/v#{version}/CodexTally-macos-universal.zip",
       verified: "github.com/findwangdi/CodexTally/"
   name "CodexTally"
-  desc "Native, local-first Codex usage meter for the macOS menu bar"
+  desc "Native, local-first Codex usage meter for the menu bar"
   homepage "https://github.com/findwangdi/CodexTally"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "CodexTally.app"
-
-  caveats <<~EOS
-    CodexTally is currently ad-hoc signed, not Apple-notarized.
-    Install this Cask with --no-quarantine, as shown in the tap README.
-  EOS
 
   zap trash: [
     "~/Library/Application Support/CodexTally",
     "~/Library/Preferences/com.findwangdi.CodexTally.plist",
   ]
+
+  caveats <<~EOS
+    CodexTally is currently ad-hoc signed, not Apple-notarized.
+    Install this Cask with --no-quarantine, as shown in the tap README.
+  EOS
 end
