@@ -3,19 +3,21 @@
 Install [CodexTally](https://github.com/findwangdi/CodexTally) with:
 
 ```bash
-brew install --cask --no-quarantine findwangdi/tap/codex-tally
+brew install findwangdi/tap/codex-tally
 ```
 
-CodexTally is currently ad-hoc signed rather than Apple-notarized, so the explicit `--no-quarantine` flag is required. The Cask pins the SHA-256 checksum of the published universal release.
+Homebrew builds CodexTally locally from the tagged MIT-licensed source, verifies the source SHA-256, and installs a `codex-tally` launcher. No Gatekeeper bypass is required.
+
+Launch it with:
+
+```bash
+codex-tally
+```
 
 Uninstall the app while keeping its local cache:
 
 ```bash
-brew uninstall --cask codex-tally
+brew uninstall codex-tally
 ```
 
-Remove the app and its derived local cache:
-
-```bash
-brew uninstall --cask --zap codex-tally
-```
+The formula never removes `~/Library/Application Support/CodexTally`; uninstalling preserves derived local caches.
