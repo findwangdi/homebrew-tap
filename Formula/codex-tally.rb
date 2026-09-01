@@ -1,8 +1,8 @@
 class CodexTally < Formula
   desc "Native, local-first Codex usage meter for the menu bar"
   homepage "https://github.com/findwangdi/CodexTally"
-  url "https://github.com/findwangdi/CodexTally/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "7f5cfdd3a47e6024d81a3d10fa251ceccc4752e47b28791c5247b38794c8e9c7"
+  url "https://github.com/findwangdi/CodexTally/archive/refs/tags/v0.3.2.tar.gz"
+  sha256 "9234b2c56f46f3b5d42d32f450e12ccaefbd282bea92903824109ed1c9470d25"
   license "MIT"
 
   depends_on macos: :sonoma
