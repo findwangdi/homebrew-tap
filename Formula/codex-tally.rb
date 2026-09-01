@@ -1,8 +1,8 @@
 class CodexTally < Formula
   desc "Native, local-first Codex usage meter for the menu bar"
   homepage "https://github.com/findwangdi/CodexTally"
-  url "https://github.com/findwangdi/CodexTally/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "581743da23ea4ee47459c59850e73b9eca15fd7eb16916c1db564f81fa2091db"
+  url "https://github.com/findwangdi/CodexTally/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "7f5cfdd3a47e6024d81a3d10fa251ceccc4752e47b28791c5247b38794c8e9c7"
   license "MIT"
 
   depends_on macos: :sonoma
@@ -26,7 +26,7 @@ class CodexTally < Formula
   test do
     app = libexec/"CodexTally.app"
     assert_path_exists app/"Contents/Resources/en.lproj/Localizable.strings"
-    assert_path_exists app/"Contents/Resources/zh-Hans.lproj/Localizable.strings"
+    refute_path_exists app/"Contents/Resources/zh-Hans.lproj"
     system "/usr/bin/codesign", "--verify", "--deep", "--strict", app
   end
 end

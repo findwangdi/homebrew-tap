@@ -6,7 +6,7 @@ Install [CodexTally](https://github.com/findwangdi/CodexTally) with:
 brew install findwangdi/tap/codex-tally
 ```
 
-Homebrew builds CodexTally locally from the tagged MIT-licensed source, verifies the source SHA-256, and installs a `codex-tally` launcher. No Gatekeeper bypass is required.
+Homebrew builds the English-only CodexTally interface locally from the tagged MIT-licensed source, verifies the source SHA-256, and installs a `codex-tally` launcher. No Gatekeeper bypass is required.
 
 Launch it with:
 
